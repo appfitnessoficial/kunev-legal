@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Legal y Privacidad · Kunev</title>
+<meta name="description" content="Términos, Política de Privacidad, aviso médico, descargo de responsabilidad y condiciones de suscripción de Kunev." />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#0A1512" />
+<style>
+  :root{
+    --bg:#0A1512; --surface:#0F1D19; --surface-2:#122420;
+    --line:#1E322C; --text:#E7F1EC; --text-2:#B7C9C1; --muted:#7F978E;
+    --accent:#19E0B0; --accent-soft:rgba(25,224,176,.14); --accent-line:rgba(25,224,176,.34);
+    --gold:#E8B54A; --warn:#F0A24E; --blue:#5FC6E8;
+    --maxw:70ch;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:var(--sans); font-size:16.5px; line-height:1.62;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  }
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline}
+  a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:3px}
+
+  /* ── Header ── */
+  header.site{
+    border-bottom:1px solid var(--line);
+    background:linear-gradient(180deg, rgba(25,224,176,.07), transparent 70%);
+  }
+  .wrap{max-width:1120px; margin:0 auto; padding:0 24px}
+  .brand{display:flex; align-items:center; gap:13px; padding:26px 0 8px}
+  .logo{width:40px; height:40px; border-radius:11px; background:linear-gradient(140deg,#22E6B8,#2FA9E6); display:flex; align-items:center; justify-content:center; box-shadow:0 6px 22px rgba(25,224,176,.28)}
+  .logo svg{width:24px; height:24px}
+  .brand-name{font-size:20px; font-weight:800; letter-spacing:.5px}
+  .brand-name b{color:var(--accent)}
+  .lede{padding:6px 0 30px; max-width:60ch}
+  .lede h1{font-size:clamp(28px,5vw,40px); line-height:1.1; letter-spacing:-.6px; margin:.2em 0 .3em; text-wrap:balance; font-weight:800}
+  .lede p{color:var(--text-2); margin:0; font-size:16px}
+  .meta-row{display:flex; flex-wrap:wrap; gap:8px; margin-top:18px}
+  .chip{font-size:12px; color:var(--text-2); background:var(--surface); border:1px solid var(--line); border-radius:999px; padding:5px 11px; letter-spacing:.2px}
+  .chip b{color:var(--text); font-weight:700}
+
+  /* ── Layout ── */
+  .layout{max-width:1120px; margin:0 auto; padding:34px 24px 80px; display:grid; grid-template-columns:230px minmax(0,1fr); gap:48px}
+  @media (max-width:860px){.layout{grid-template-columns:1fr; gap:0; padding-top:20px}}
+
+  /* ── Table of contents ── */
+  nav.toc{position:sticky; top:24px; align-self:start; height:max-content}
+  @media (max-width:860px){nav.toc{position:static; margin-bottom:26px}}
+  nav.toc .toc-label{font-size:11px; letter-spacing:1.4px; text-transform:uppercase; color:var(--muted); font-weight:700; margin:0 0 12px 12px}
+  nav.toc ol{list-style:none; margin:0; padding:0; counter-reset:s; display:flex; flex-direction:column; gap:2px}
+  nav.toc a{display:flex; gap:10px; align-items:baseline; color:var(--text-2); padding:8px 12px; border-radius:9px; font-size:14px; border-left:2px solid transparent}
+  nav.toc a:hover{background:var(--surface); color:var(--text); text-decoration:none}
+  nav.toc a .n{counter-increment:s; color:var(--muted); font-variant-numeric:tabular-nums; font-size:12px; min-width:14px}
+  nav.toc a .n::before{content:counter(s,decimal-leading-zero)}
+
+  /* ── Sections ── */
+  main{min-width:0}
+  section.doc{scroll-margin-top:20px; padding:22px 0 30px; border-top:1px solid var(--line)}
+  section.doc:first-child{border-top:0; padding-top:4px}
+  .sec-head{display:flex; align-items:center; gap:13px; margin-bottom:6px}
+  .sec-badge{width:38px; height:38px; border-radius:11px; display:flex; align-items:center; justify-content:center; flex:none; border:1px solid var(--accent-line); background:var(--accent-soft)}
+  .sec-badge svg{width:20px; height:20px}
+  section.doc h2{font-size:22px; letter-spacing:-.3px; margin:0; font-weight:800; text-wrap:balance}
+  .sec-sub{color:var(--muted); font-size:13px; margin:2px 0 0}
+  section.doc h3{font-size:15.5px; font-weight:800; letter-spacing:.1px; margin:26px 0 6px; color:var(--text)}
+  section.doc p{color:var(--text-2); margin:10px 0}
+  ul.li{list-style:none; margin:8px 0; padding:0; display:flex; flex-direction:column; gap:8px}
+  ul.li li{position:relative; padding-left:20px; color:var(--text-2)}
+  ul.li li::before{content:""; position:absolute; left:4px; top:.66em; width:6px; height:6px; border-radius:50%; background:var(--accent)}
+  .note{display:flex; gap:11px; background:var(--surface); border:1px solid var(--line); border-left:3px solid var(--accent); border-radius:10px; padding:13px 15px; margin:16px 0; color:var(--text)}
+  .note svg{width:18px; height:18px; flex:none; margin-top:2px; color:var(--accent)}
+  .note p{margin:0; color:var(--text); font-weight:600; font-size:14.5px}
+
+  /* accent variants per section */
+  section[data-accent="blue"]  .sec-badge{border-color:rgba(95,198,232,.4); background:rgba(95,198,232,.14)} section[data-accent="blue"]  .sec-badge svg{color:var(--blue)} section[data-accent="blue"]  .note{border-left-color:var(--blue)} section[data-accent="blue"] .note svg{color:var(--blue)}
+  section[data-accent="warn"]  .sec-badge{border-color:rgba(240,162,78,.4); background:rgba(240,162,78,.14)} section[data-accent="warn"]  .sec-badge svg{color:var(--warn)} section[data-accent="warn"]  .note{border-left-color:var(--warn)} section[data-accent="warn"] .note svg{color:var(--warn)}
+  section[data-accent="gold"]  .sec-badge{border-color:rgba(232,181,74,.4); background:rgba(232,181,74,.14)} section[data-accent="gold"]  .sec-badge svg{color:var(--gold)} section[data-accent="gold"]  .note{border-left-color:var(--gold)} section[data-accent="gold"] .note svg{color:var(--gold)}
+  section[data-accent="green"] .sec-badge svg{color:var(--accent)}
+
+  footer.site{border-top:1px solid var(--line); background:var(--surface); }
+  footer.site .wrap{padding:26px 24px 40px; color:var(--muted); font-size:13px; display:flex; flex-wrap:wrap; gap:6px 20px; justify-content:space-between; align-items:center}
+  footer.site a{color:var(--text-2)}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M3 12h4l2-6 3 12 2.5-7L18 12h3" stroke="#04241D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="brand-name">Kunev</span>
+    </div>
+    <div class="lede">
+      <h1>Legal y privacidad</h1>
+      <p>Transparencia, en criollo. Kunev es una app <strong style="color:var(--text)">informativa y motivacional</strong> de bienestar y hábitos: no reemplaza el consejo de un profesional de la salud. Acá está todo sobre cómo la usás y cómo cuidamos tus datos.</p>
+      <div class="meta-row">
+        <span class="chip"><b>Kunev</b> v1.0.1</span>
+        <span class="chip">Texto legal <b>2026.09-8</b></span>
+        <span class="chip">Vigencia <b>Septiembre 2026</b></span>
+        <span class="chip">Jurisdicción <b>República Oriental del Uruguay</b></span>
+        <span class="chip">Contacto <b>appfitness.oficial@gmail.com</b></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <nav class="toc" aria-label="Índice">
+    <p class="toc-label">Contenido</p>
+    <ol>
+      <li><a href="#terminos"><span class="n"></span> Términos y Condiciones</a></li>
+      <li><a href="#salud"><span class="n"></span> Aviso Médico y de Salud</a></li>
+      <li><a href="#guardian"><span class="n"></span> Guardián del Corazón y SOS</a></li>
+      <li><a href="#privacidad"><span class="n"></span> Política de Privacidad</a></li>
+      <li><a href="#datos"><span class="n"></span> Tus datos de salud</a></li>
+      <li><a href="#comunidad"><span class="n"></span> Normas de comunidad</a></li>
+      <li><a href="#responsabilidad"><span class="n"></span> Descargo de Responsabilidad</a></li>
+      <li><a href="#suscripcion"><span class="n"></span> Suscripción, pagos y monedas</a></li>
+    </ol>
+  </nav>
+
+  <main>
+
+    <section class="doc" id="terminos" data-accent="green">
+      <div class="sec-head">
+        <span class="sec-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3h8l4 4v14H6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M14 3v4h4M9 12h6M9 16h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        <div><h2>Términos y Condiciones</h2><p class="sec-sub">Las reglas para usar</p></div>
+      </div>
+      <p>Al descargar, instalar o usar Kunev ("la app", "el servicio", "nosotros") aceptás estos Términos y Condiciones. Si no estás de acuerdo con alguno de ellos, por favor no uses la app.</p>
+      <h3>1. Qué es</h3>
+      <p>Kunev es una aplicación de bienestar, fitness y hábitos saludables con fines informativos y motivacionales. Ofrece planes de entrenamiento, guías de nutrición, seguimiento de actividad, herramientas de salud y elementos de juego (misiones, logros, monedas virtuales) para acompañarte en tu camino.</p>
+      <div class="note"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 8h.01M11 12h1v4h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Kunev es una herramienta de apoyo. No es un dispositivo médico, ni un servicio de salud, ni un reemplazo de la atención de un profesional matriculado.</p></div>
+      <h3>2. Uso permitido</h3>
+      <p>Podés usar la app para tu uso personal y no comercial. Te comprometés a:</p>
+      <ul class="li">
+        <li>Brindar información veraz sobre tu edad, estado de salud y condiciones al configurar tu perfil.</li>
+        <li>No usar la app si sos menor de edad sin la supervisión y el consentimiento de tu madre, padre o tutor.</li>
+        <li>No copiar, revender, modificar ni distribuir el contenido de la app sin autorización.</li>
+        <li>No intentar vulnerar la seguridad de la app ni usarla para fines ilícitos.</li>
+      </ul>
+      <h3>3. Edad mínima</h3>
+      <p>Kunev es para personas de 16 años o más. Si sos menor de 16, no podés usar la app: no está diseñada para vos y no tratamos datos de salud de menores de esa edad.</p>
+      <ul class="li">
+        <li>Entre 16 y 18 años necesitás el consentimiento de tu madre, padre o tutor, y el acompañamiento de un profesional de la salud antes de empezar cualquier plan de entrenamiento o de alimentación.</li>
+        <li>Si detectamos una cuenta de una persona menor de 16 años, la damos de baja y borramos sus datos.</li>
+        <li>Si sos madre, padre o tutor y creés que un menor a tu cargo creó una cuenta, escribinos y la eliminamos.</li>
+      </ul>
+      <p>En países donde la ley exija una edad mínima mayor para consentir el tratamiento de datos, rige esa edad.</p>
+      <h3>4. Tu cuenta y tus datos</h3>
+      <p>Sos responsable de mantener la confidencialidad de tu cuenta y de la información que cargás. Tus datos se almacenan principalmente en tu dispositivo (ver Política de Privacidad).</p>
+      <h3>5. Contenido generado con Inteligencia Artificial</h3>
+      <p>Parte del contenido de la app (planes de entrenamiento, sugerencias de nutrición, análisis y respuestas del coach) se genera con Inteligencia Artificial. Este contenido es orientativo, puede contener errores o imprecisiones y no debe tomarse como una indicación profesional. Siempre validá cualquier plan con un profesional de la salud.</p>
+      <h3>6. Cambios en el servicio</h3>
+      <p>Podemos actualizar, modificar o discontinuar funciones de la app en cualquier momento para mejorarla, corregir errores o cumplir requisitos legales. Intentaremos avisarte de los cambios relevantes.</p>
+      <h3>7. Propiedad intelectual</h3>
+      <p>La marca, el logo, los diseños, textos, ilustraciones, avatares y demás elementos de la app son propiedad de sus titulares y están protegidos por las leyes de propiedad intelectual.</p>
+      <h3>8. Ley aplicable</h3>
+      <p>Estos Términos se rigen por las leyes de la República Oriental del Uruguay. Cualquier controversia se someterá a los tribunales competentes de dicha jurisdicción.</p>
+      <div class="note"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 8h.01M11 12h1v4h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Si tenés dudas sobre estos Términos, escribinos a appfitness.oficial@gmail.com.</p></div>
+    </section>
+
+    <section class="doc" id="salud" data-accent="green">
+      <div class="sec-head">
+        <span class="sec-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5v6a6 6 0 0012 0V5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.8"/><path d="M4 5h2M14 5h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        <div><h2>Aviso Médico y de Salud</h2><p class="sec-sub">Información, no diagnóstico</p></div>
+      </div>
+      <div class="note"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 8h.01M11 12h1v4h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Kunev brinda información general con fines educativos y motivacionales. NO es consejo médico ni nutricional profesional, ni sustituye la consulta con un profesional de la salud matriculado.</p></div>
+      <h3>1. Consultá antes de empezar</h3>
+      <p>Antes de iniciar cualquier plan de ejercicio, dieta o cambio de hábitos, consultá con tu médico, nutricionista o profesional de la salud. Esto es especialmente importante si:</p>
+      <ul class="li">
+        <li>Tenés una condición preexistente (cardíaca, respiratoria, metabólica, diabetes, hipertensión, etc.).</li>
+        <li>Estás cursando un embarazo o posparto.</li>
+        <li>Tenés lesiones, cirugías recientes o limitaciones físicas.</li>
+        <li>Sos menor de edad o adulto mayor.</li>
+        <li>Tomás medicación o tenés alergias e intolerancias alimentarias.</li>
+      </ul>
+      <h3>2. Escuchá a tu cuerpo</h3>
+      <p>Si durante un entrenamiento sentís dolor en el pecho, mareos, falta de aire, palpitaciones o cualquier malestar, detenete de inmediato y buscá atención médica. No fuerces tu cuerpo más allá de tus límites.</p>
+      <h3>3. La información puede no aplicarte</h3>
+      <p>Los planes, las calorías, los macros y las recomendaciones de la app son estimaciones generales. Cada persona es distinta: lo que funciona para alguien puede no ser adecuado para vos. Solo un profesional que te evalúe puede darte una indicación personalizada.</p>
+      <h3>5. Los números que ves son estimaciones</h3>
+      <p>Calorías, macros, grasa corporal, edad metabólica, calidad de sueño, recuperación, Estado de hoy y cualquier otro índice de la app son estimaciones calculadas con fórmulas generales y con lo que reportan tu teléfono, tu reloj o tu banda. No son mediciones clínicas, no reemplazan un análisis de sangre ni un estudio, y pueden tener errores importantes en tu caso particular.</p>
+      <h3>6. Suplementos</h3>
+      <p>La información sobre suplementos es educativa y de consenso general. Los suplementos NO son medicamentos y la app no te los receta ni te los indica.</p>
+      <ul class="li">
+        <li>Las dosis que figuran son rangos habituales de la bibliografía, no una prescripción para vos.</li>
+        <li>Las interacciones que listamos NO son exhaustivas: puede haber otras que no figuren.</li>
+        <li>Si tomás cualquier medicación, tenés una enfermedad diagnosticada, estás embarazada, en lactancia o sos menor de edad, consultá con tu médico o farmacéutico ANTES de sumar cualquier suplemento.</li>
+        <li>La calidad y la pureza de los productos comerciales varía y no la controlamos.</li>
+      </ul>
+      <h3>7. Salud femenina, embarazo y menopausia</h3>
+      <p>Las funciones de ciclo menstrual, embarazo, posparto y menopausia son de seguimiento y de información general.</p>
+      <ul class="li">
+        <li>El seguimiento del ciclo NO es un método anticonceptivo y no sirve para evitar ni para buscar un embarazo. Los días fértiles que estima la app son una predicción estadística que se equivoca.</li>
+        <li>Nada de lo que muestra reemplaza el control ginecológico ni el control obstétrico. Durante el embarazo y el posparto, todo lo que hagas se consulta primero con quien te controla.</li>
+        <li>Ante sangrado inesperado, dolor, contracciones, disminución de movimientos fetales o cualquier señal de alarma, consultá de inmediato: no busques la respuesta en la app.</li>
+        <li>La información sobre menopausia y sobre salud masculina tampoco reemplaza el control con tu profesional.</li>
+      </ul>
+      <h3>8. Medicación y recordatorios</h3>
+      <p>Los recordatorios de medicación son una ayuda de memoria y nada más. Pueden no llegar (teléfono apagado, sin batería, notificaciones desactivadas, el sistema operativo las retrasa). No dependas solo de la app para tomar tu medicación, y nunca cambies una dosis o suspendas un tratamiento por algo que diga la app.</p>
+      <h3>9. Trastornos de la conducta alimentaria</h3>
+      <p>Contar calorías, pesarse y mirar fotos de progreso puede ser dañino si tenés o tuviste un trastorno de la conducta alimentaria. Si es tu caso, usá estas funciones solo con acompañamiento profesional, o directamente no las uses: podés apagarlas.</p>
+      <h3>10. Contenido generado con IA</h3>
+      <p>Las funciones de IA (coach, planes, escaneo de comidas, análisis corporal) son orientativas y pueden equivocarse: pueden inventar datos, calcular mal las calorías de un plato o sugerir algo que no te convenga. No las uses como base para decisiones médicas.</p>
+      <h3>11. Emergencias</h3>
+      <div class="note"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 8h.01M11 12h1v4h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p>La app no es un servicio de emergencias. Ante una urgencia médica, llamá al número de emergencias de tu país o acudí al centro de salud más cercano. El Guardián del Corazón tampoco lo es: leé su sección para saber exactamente qué hace y qué no.</p></div>
+    </section>
+
+    <section class="doc" id="guardian" data-accent="warn">
+      <div class="sec-head">
+        <span class="sec-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l9 16H3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 9v4M12 16h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        <div><h2>Guardián del Corazón y SOS</h2><p class="sec-sub">Qué hace, qué NO hace y cuándo puede fallar</p></div>
+      </div>
+      <div class="note"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 8h.01M11 12h1v4h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p>El Guardián del Corazón NO es un dispositivo médico, NO es un servicio de emergencias y NO reemplaza llamar al número de emergencias de tu país. Es una ayuda que puede fallar. Leé esto completo antes de confiar en él.</p></div>
+      <h3>1. Qué hace realmente</h3>
+      <p>El Guardián aprende tu ritmo cardíaco habitual (frecuencia en reposo y variabilidad) y avisa cuando los valores que recibe se apartan mucho de ese patrón. Es una comparación estadística contra vos mismo, no un análisis clínico.</p>
+      <ul class="li">
+        <li>No detecta arritmias, infartos, fibrilación auricular ni ninguna condición cardíaca concreta.</li>
+        <li>No hace un electrocardiograma ni nada equivalente.</li>
+        <li>Un aviso del Guardián no significa que tengas un problema; y que NO avise no significa que estés bien.</li>
+      </ul>
+      <h3>2. Cómo funciona el SOS, con precisión</h3>
+      <p>Cuando el Guardián escala a SOS, aparece una cuenta regresiva en pantalla. Si no la cancelás, la app ABRE el mensaje de texto o la llamada a tus contactos de confianza con el texto y tu ubicación ya cargados.</p>
+      <div class="note"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 8h.01M11 12h1v4h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Kunev NO envía el mensaje por vos. Abre el compositor de tu teléfono con todo escrito y sos vos quien toca Enviar. Si estás inconsciente o no podés usar el teléfono, ese mensaje NO sale.</p></div>
+      <p>Lo decimos así de crudo porque es la diferencia entre lo que la gente imagina y lo que pasa. Hoy, en la app, no existe un envío automático sin que alguien toque la pantalla.</p>
+      <h3>3. Cuándo el Guardián NO va a funcionar</h3>
+      <ul class="li">
+        <li>Si no tenés un pulsómetro o banda cardíaca real conectada: sin sensor, el SOS automático no se dispara (entra en modo simulacro y te lo avisa en pantalla).</li>
+        <li>Si la app está cerrada o el teléfono apagado, bloqueado o sin batería: el Guardián no monitorea en segundo plano.</li>
+        <li>Si no hay señal, datos, o el teléfono no tiene línea para mandar un SMS ni para llamar.</li>
+        <li>Si no cargaste contactos de confianza, o los números están mal.</li>
+        <li>Si negaste el permiso de ubicación: el mensaje sale sin tu posición.</li>
+        <li>Si el sensor mide mal (banda floja, muñeca sudada, interferencia Bluetooth): el Guardián trabaja con datos equivocados y puede avisar de más o de menos.</li>
+      </ul>
+      <h3>4. Detección de inmovilidad</h3>
+      <p>Cuando el Guardián está en alerta enciende el acelerómetro para ver si el teléfono dejó de moverse. Eso es todo lo que mide: que el TELÉFONO está quieto. No mide que vos te hayas caído ni que estés inconsciente.</p>
+      <ul class="li">
+        <li>No es detección de caídas y no la afirmamos.</li>
+        <li>Un teléfono sobre una mesa da inmovilidad aunque vos estés perfecto.</li>
+        <li>Un teléfono en un bolsillo puede seguir moviéndose aunque vos no estés bien.</li>
+      </ul>
+      <h3>5. Falsas alarmas y alarmas que no suenan</h3>
+      <p>Un sistema que avisa por desvíos estadísticos tiene los dos errores posibles: alguna vez te va a avisar sin motivo (café, fiebre, estrés, una medición sucia) y alguna vez no te va a avisar cuando había algo. No podemos prometer ninguna tasa de acierto y no la prometemos.</p>
+      <h3>6. Tus contactos de confianza</h3>
+      <p>Los números que cargás se guardan en tu dispositivo. Avisales a esas personas que las pusiste como contacto de emergencia: van a recibir un mensaje con tu ubicación y tienen derecho a saberlo. Sos vos quien es responsable de contar con su consentimiento.</p>
+      <h3>7. Lo que aceptás al usarlo</h3>
+      <p>Al activar el Guardián entendés y aceptás que es una herramienta de apoyo sin garantía de funcionamiento, que no sustituye supervisión médica ni un sistema de teleasistencia, y que la app no responde por consecuencias derivadas de que el Guardián no haya detectado algo, haya avisado tarde, haya dado una falsa alarma o de que el SOS no haya llegado a destino.</p>
+      <div class="note"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 8h.01M11 12h1v4h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Ante dolor en el pecho, falta de aire, desmayo o cualquier síntoma que te asuste: llamá YA al número de emergencias. No esperes a que la app diga nada.</p></div>
+    </section>
+
+    <section class="doc" id="privacidad" data-accent="blue">
+      <div class="sec-head">
+        <span class="sec-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 4.4-3 8-7 10-4-2-7-5.6-7-10V6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9.5 12l1.8 1.8 3.4-3.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div><h2>Política de Privacidad</h2><p class="sec-sub">Cómo cuidamos tus datos</p></div>
+      </div>
+      <p>Tu privacidad es una prioridad. Esta política explica qué datos usa, para qué, dónde se guardan y qué control tenés sobre ellos.</p>
+      <h3>1. Qué datos usamos</h3>
+      <ul class="li">
+        <li>Datos de perfil: nombre, edad, peso, altura, objetivo y preferencias que cargás vos.</li>
+        <li>Datos de salud y actividad: entrenamientos, pasos, frecuencia cardíaca, sueño, hidratación, medicación, ciclo y demás registros que decidas cargar.</li>
+        <li>Preferencias de la app: tema elegido, unidades, idioma y configuración de notificaciones.</li>
+        <li>Datos de uso: para que la app funcione (por ejemplo, tu progreso, tus logros y tus monedas).</li>
+      </ul>
+      <h3>2. Almacenamiento local en tu dispositivo</h3>
+      <p>La mayoría de tus datos se guardan localmente en tu dispositivo. Vos tenés el control: si borrás la app, esos datos locales se eliminan. Cuando activás la sincronización o la cuenta en la nube, algunos datos se copian a servidores seguros para que no los pierdas al cambiar de dispositivo.</p>
+      <h3>3. Uso de Inteligencia Artificial</h3>
+      <p>Cuando usás funciones con IA (planes, coach, análisis de comidas o de cuerpo), parte de la información que ingresás puede procesarse mediante servicios de IA para generar la respuesta. Enviamos solo lo necesario para brindar la función y no usamos esa información para identificarte con fines publicitarios.</p>
+      <h3>4. No vendemos tus datos</h3>
+      <div class="note"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 8h.01M11 12h1v4h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Nunca vendemos ni alquilamos tus datos personales ni tus datos de salud a terceros. Punto.</p></div>
+      <h3>5. Cuándo compartimos información</h3>
+      <p>Solo compartimos datos con proveedores que hacen funcionar la app (por ejemplo, almacenamiento en la nube o procesamiento de IA), bajo acuerdos de confidencialidad y únicamente lo mínimo necesario. También podemos hacerlo si una ley o autoridad competente lo exige.</p>
+      <h3>6. Permisos del dispositivo</h3>
+      <p>Kunev puede pedirte permisos (ubicación para GPS de entrenamientos, cámara para escanear comidas, notificaciones, salud/actividad). Podés otorgarlos o revocarlos desde la configuración de tu teléfono cuando quieras.</p>
+      <h3>7. Tus derechos</h3>
+      <ul class="li">
+        <li>Acceder a tus datos y saber qué guardamos.</li>
+        <li>Corregir o actualizar tu información.</li>
+        <li>Eliminar tus datos borrando la app o solicitando la baja de tu cuenta.</li>
+        <li>Revocar permisos y desactivar la sincronización.</li>
+      </ul>
+      <div class="note"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 8h.01M11 12h1v4h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Para ejercer cualquiera de estos derechos, escribinos a appfitness.oficial@gmail.com.</p></div>
+    </section>
+
+    <section class="doc" id="datos" data-accent="blue">
+      <div class="sec-head">
+        <span class="sec-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="6" rx="7" ry="3" stroke="currentColor" stroke-width="1.8"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6" stroke="currentColor" stroke-width="1.8"/></svg></span>
+        <div><h2>Tus datos de salud</h2><p class="sec-sub">Dónde vive cada cosa y cómo te la llevás</p></div>
+      </div>
+      <p>Los datos de salud son los más sensibles que existen. Esta sección explica qué guarda, dónde, quién puede verlo y cómo lo sacás o lo borrás.</p>
+      <h3>1. Qué datos de salud puede guardar</h3>
+      <ul class="li">
+        <li>Actividad: pasos, entrenamientos, distancia, calorías, recorridos de GPS.</li>
+        <li>Vitales: frecuencia cardíaca, variabilidad, oxígeno en sangre y sueño (leídos de Apple Salud, Health Connect o una banda Bluetooth).</li>
+        <li>Cuerpo: peso, medidas, fotos de progreso.</li>
+        <li>Ficha médica: condiciones, alergias, medicación y sus recordatorios, presión, glucosa.</li>
+        <li>Salud femenina: ciclo menstrual, embarazo, posparto, menopausia.</li>
+        <li>Nutrición: comidas, fotos de platos, suplementos.</li>
+      </ul>
+      <p>Todo esto lo cargás o lo autorizás vos. Nada se activa solo.</p>
+      <h3>2. Dónde vive cada cosa</h3>
+      <p>Por defecto, todo se guarda en tu dispositivo. Si iniciás sesión con una cuenta, parte de tu progreso se copia a nuestros servidores (Supabase) para que no lo pierdas al cambiar de teléfono. Sin cuenta, nada sale de tu teléfono salvo lo que se detalla en el punto 3.</p>
+      <ul class="li">
+        <li>Siempre en tu dispositivo: ficha médica, medicación, contactos del SOS y tu configuración de privacidad.</li>
+        <li>En la nube, solo con la sesión iniciada: progreso, entrenamientos, nutrición, logros, puntos y preferencias.</li>
+        <li>Los datos que la app lee de Apple Salud o de Health Connect quedan en el teléfono: no los subimos.</li>
+      </ul>
+      <h3>3. Qué sale del teléfono cuando usás IA</h3>
+      <p>Si escaneás un plato, pedís un análisis corporal o le hablás al coach, esa foto o ese texto se envía a nuestro servidor y de ahí al proveedor de inteligencia artificial que genera la respuesta: Google (modelos Gemini) para el escáner de comida y el análisis corporal, y Google o Anthropic (modelos Claude) para el coach, según cuál esté activo. Se manda lo mínimo necesario para la función.</p>
+      <ul class="li">
+        <li>No mandamos tu nombre, tu ficha médica ni tu historial completo para que la IA responda.</li>
+        <li>No usamos esa información para publicidad ni para identificarte.</li>
+        <li>Si preferís que nada salga del teléfono, no uses las funciones de IA: el resto de la app funciona igual.</li>
+      </ul>
+      <h3>4. Quién más participa</h3>
+      <p>Trabajamos con proveedores que hacen funcionar la app y que solo reciben lo mínimo: alojamiento y base de datos (Supabase), procesamiento de IA (Google y, si está activo, Anthropic), generación del avatar de tu perfil (DiceBear, que solo recibe una semilla sin datos personales), reportes de errores técnicos (Sentry), gestión de suscripciones (RevenueCat) y las tiendas de aplicaciones. Ninguno tiene permiso para usar tus datos para sus propios fines.</p>
+      <div class="note"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 8h.01M11 12h1v4h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Nunca vendemos ni alquilamos tus datos de salud, y no hacemos publicidad segmentada con ellos.</p></div>
+      <h3>5. Base legal y consentimiento</h3>
+      <p>Tratamos tus datos de salud sobre la base de tu consentimiento explícito, que das al aceptar estos textos y al activar cada función. Podés retirarlo cuando quieras: apagando la función, revocando permisos desde tu teléfono, cerrando sesión o eliminando tu cuenta. Retirar el consentimiento no afecta lo que ya se hizo antes, y desde ese momento dejamos de tratar esos datos.</p>
+      <p>Registramos la fecha y la versión del texto que aceptaste, para poder mostrarte con precisión qué aceptaste y cuándo.</p>
+      <h3>6. Cuánto tiempo los guardamos</h3>
+      <p>Mientras tengas la app instalada o la cuenta abierta. Si borrás la app, los datos locales se van con ella. Si eliminás la cuenta, borramos también lo que estaba en la nube.</p>
+      <h3>7. Tus derechos, y dónde están los botones</h3>
+      <ul class="li">
+        <li>Exportar todo: Perfil, Ajustes, "Exportar mis datos". Te bajás un archivo JSON o CSV con tu historial completo.</li>
+        <li>Eliminar cuenta y datos: Perfil, Ajustes, "Eliminar cuenta". Borra el dispositivo y la nube. Es irreversible.</li>
+        <li>Acceder, corregir, oponerte o limitar el tratamiento: escribinos y lo resolvemos.</li>
+        <li>Revocar permisos (ubicación, cámara, salud, notificaciones) desde la configuración de tu teléfono, cuando quieras.</li>
+        <li>Presentar un reclamo ante la autoridad de protección de datos de tu país.</li>
+      </ul>
+      <h3>8. Ubicación y recorridos</h3>
+      <p>La app usa el GPS únicamente mientras tenés una actividad en curso, para dibujar el recorrido y medir distancia y ritmo. También puede pedir tu posición en el momento exacto en que se dispara un SOS, para incluirla en el mensaje. Tus recorridos son privados salvo que los publiques, y la exportación te deja elegir si incluir el GPS o no.</p>
+      <div class="note"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 8h.01M11 12h1v4h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Un mapa de tus salidas muestra dónde vivís y a qué hora salís. Pensalo dos veces antes de hacerlo público.</p></div>
+      <h3>9. Fotos</h3>
+      <p>Las fotos de progreso corporal se guardan en tu dispositivo. Las fotos de comida se envían al escáner solo cuando vos apretás analizar. Las fotos que publicás en clubes o en el feed las ve quien permita tu nivel de privacidad.</p>
+      <h3>10. Transferencias internacionales</h3>
+      <p>Nuestros proveedores pueden alojar o procesar datos fuera de tu país. Elegimos proveedores con compromisos contractuales de protección equivalentes a los de tu jurisdicción.</p>
+      <div class="note"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 8h.01M11 12h1v4h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Cualquier consulta o pedido sobre tus datos: appfitness.oficial@gmail.com.</p></div>
+    </section>
+
+    <section class="doc" id="comunidad" data-accent="blue">
+      <div class="sec-head">
+        <span class="sec-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3h8l4 4v14H6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+        <div><h2>Normas de comunidad</h2><p class="sec-sub">Qué se puede publicar y cómo se reporta</p></div>
+      </div>
+      <h3>Lo que esperamos de vos</h3>
+      <p>Kunev es una comunidad fitness. Al participar (subir fotos, publicar, comentar, seguir a otros) aceptás tratar a los demás con respeto y no publicar contenido que ponga en riesgo a otras personas.</p>
+      <h3>Lo que está PROHIBIDO</h3>
+      <ul class="li">
+        <li>Hacerte pasar por otra persona (real o famosa). Aunque tu cuenta esté verificada, la verificación NO prueba identidad — si se demuestra suplantación, la cuenta se suspende y se pide verificación con documento (KYC) para recuperarla.</li>
+        <li>Contenido sexual, desnudos o insinuación sexual. Cero tolerancia con contenido que involucre a menores: reporte único = suspensión inmediata + reporte a autoridades cuando corresponda.</li>
+        <li>Acoso, hostigamiento, amenazas o bullying hacia otros usuarios.</li>
+        <li>Discurso de odio o discriminación por raza, género, orientación, nacionalidad, religión, condición física o cualquier otra categoría.</li>
+        <li>Violencia gráfica, autolesión o contenido que promueva trastornos alimentarios.</li>
+        <li>Venta o promoción de sustancias ilegales (esteroides sin receta, sustancias prohibidas, suplementos no aprobados).</li>
+        <li>Consejos médicos peligrosos: dietas extremas de &lt;1000 kcal, restricciones sin supervisión, planes que puedan dañar salud.</li>
+        <li>Spam, publicidad no autorizada, estafas o esquemas piramidales.</li>
+        <li>Contenido robado (fotos, rutinas, videos ajenos publicados como propios).</li>
+      </ul>
+      <h3>Cómo funciona el sistema de reporte</h3>
+      <p>Cada post, comentario, foto y perfil tiene un botón "⋯" con la opción "Reportar". Tu denuncia es anónima. Elegí el motivo (10 categorías), agregá detalle si querés, y enviá. El equipo revisa según urgencia:</p>
+      <ul class="li">
+        <li>Crítica (menor, violencia, discurso de odio): atención inmediata, revisión en minutos u horas.</li>
+        <li>Alta (suplantación, contenido sexual, acoso): revisión en 24 horas.</li>
+        <li>Media / baja (spam, info médica, derechos, otro): revisión en 24-72 horas.</li>
+      </ul>
+      <p>Denuncias falsas o coordinadas también son sancionadas. Usá el reporte solo si algo viola realmente estas normas.</p>
+      <h3>Consecuencias</h3>
+      <ul class="li">
+        <li>Primera infracción menor: aviso + retiro del contenido.</li>
+        <li>Reincidencia o infracción media: suspensión temporal (7-30 días) y strike en tu cuenta.</li>
+        <li>Infracción grave (menor, contenido sexual, discurso de odio, violencia, suplantación confirmada): baneo permanente. El tick de verificación (azul, oro, violeta) se revoca.</li>
+        <li>3 strikes en 12 meses = baneo permanente.</li>
+      </ul>
+      <h3>Filtro automático de fotos</h3>
+      <p>Todas las fotos que subís pasan por un análisis automático antes de hacerse visibles: si detecta desnudo, violencia o armas con alta confianza, se rechaza sola. Si hay dudas, un moderador humano revisa. Este proceso demora entre segundos y minutos; mientras tanto la foto solo la ves vos.</p>
+      <h3>Antes de subir una foto</h3>
+      <p>Cuando vas a subir una foto, la app te pide confirmar 5 puntos: que sea tuya o tengas permiso, sin menores, sin desnudo, sin venta ilegal, y que aceptás estas normas. Sin marcar los 5 no se abre el picker.</p>
+      <h3>Bloquear y silenciar</h3>
+      <p>Podés silenciar (dejás de ver a esa persona, ella no se entera) o bloquear (rompe el vínculo bidireccional). Los dos se gestionan desde Ajustes → Privacidad y seguridad. Bloquear a alguien no es equivalente a reportarlo: si viola normas, además reportá.</p>
+      <h3>Recuperación de cuenta suspendida por suplantación</h3>
+      <p>Si tu cuenta fue suspendida porque alguien la reportó como suplantación (y vos sos legítimo), podés recuperar acceso subiendo verificación de identidad (KYC): foto de tu documento (frente y dorso) + selfie. Un moderador revisa en 24-72h y reactiva la cuenta si todo coincide. Es gratis para vos.</p>
+      <h3>Contacto</h3>
+      <div class="note"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 8h.01M11 12h1v4h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Reportes: usá el botón "Reportar" en la app. Consultas generales sobre moderación: appfitness.oficial@gmail.com · Apelaciones a suspensiones: appfitness.oficial@gmail.com · KYC: appfitness.oficial@gmail.com</p></div>
+    </section>
+
+    <section class="doc" id="responsabilidad" data-accent="warn">
+      <div class="sec-head">
+        <span class="sec-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l9 16H3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 9v4M12 16h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        <div><h2>Descargo de Responsabilidad</h2><p class="sec-sub">Entrenás bajo tu responsabilidad</p></div>
+      </div>
+      <p>Al usar reconocés y aceptás lo siguiente respecto de la responsabilidad por el uso de la app.</p>
+      <h3>1. Uso bajo tu propia responsabilidad</h3>
+      <p>Realizás los ejercicios, seguís los planes de nutrición y usás las herramientas de la app por tu propia cuenta y riesgo. Sos vos quien decide qué hacer con la información que la app te brinda.</p>
+      <h3>2. Sin responsabilidad por lesiones o daños</h3>
+      <div class="note"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 8h.01M11 12h1v4h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Kunev y sus creadores no se responsabilizan por lesiones, problemas de salud, daños físicos, psicológicos o materiales que pudieran derivarse del uso de la app, de seguir sus planes o de la información que ofrece.</p></div>
+      <h3>3. Los resultados varían</h3>
+      <p>Los resultados dependen de muchos factores personales (genética, alimentación, descanso, constancia, salud previa). La app no garantiza resultados específicos de pérdida de peso, ganancia muscular, rendimiento ni de ningún otro tipo.</p>
+      <h3>4. La IA puede equivocarse</h3>
+      <p>El contenido generado por Inteligencia Artificial puede contener errores, imprecisiones o información desactualizada. No garantizamos que sea exacto, completo ni apropiado para tu situación particular.</p>
+      <h3>5. Contenido de terceros</h3>
+      <p>La app puede incluir enlaces o referencias a contenido de terceros. No controlamos ni respondemos por ese contenido externo.</p>
+      <h3>6. Funciones de seguridad y alertas</h3>
+      <div class="note"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 8h.01M11 12h1v4h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p>El Guardián del Corazón, el SOS, la detección de inmovilidad, los avisos de salud y los recordatorios de medicación son ayudas que pueden fallar, llegar tarde o no llegar. No son un servicio de emergencias ni de teleasistencia. La app no responde por lo que pase si una de estas funciones no detecta algo, se equivoca o no llega a destino.</p></div>
+      <h3>7. Fallas técnicas y pérdida de datos</h3>
+      <p>La app puede tener errores, quedarse sin conexión, dejar de funcionar en tu modelo de teléfono o perder datos. Hacemos lo razonable para evitarlo y te damos la exportación de tus datos para que tengas tu propia copia, pero no garantizamos disponibilidad continua ni ausencia de errores.</p>
+      <h3>8. Dispositivos y sensores de terceros</h3>
+      <p>Los datos que la app lee de tu reloj, tu banda cardíaca, Apple Salud o Health Connect vienen de esos dispositivos y servicios. No controlamos su exactitud ni su disponibilidad.</p>
+      <h3>9. Límite de responsabilidad</h3>
+      <p>En la máxima medida permitida por la ley, la responsabilidad total de la app por cualquier reclamo relacionado con la app se limita al monto que hayas pagado por la suscripción en los últimos 12 meses, si corresponde.</p>
+      <div class="note"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 8h.01M11 12h1v4h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Algunas legislaciones no permiten excluir ciertas garantías ni limitar la responsabilidad por daños a la salud. En esos casos, las exclusiones de arriba se aplican solo hasta donde la ley lo permita, y tus derechos como consumidor siguen intactos.</p></div>
+    </section>
+
+    <section class="doc" id="suscripcion" data-accent="gold">
+      <div class="sec-head">
+        <span class="sec-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8l4 3 4-6 4 6 4-3-1.5 10H5.5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+        <div><h2>Suscripción, pagos y monedas</h2><p class="sec-sub">Premium y monedas virtuales</p></div>
+      </div>
+      <p>Kunev ofrece una versión gratuita y una suscripción Premium con funciones adicionales.</p>
+      <h3>1. Suscripción Premium</h3>
+      <p>La suscripción se cobra a través de la tienda de aplicaciones (App Store o Google Play) según el plan que elijas. Se renueva automáticamente al finalizar cada período, salvo que la canceles al menos 24 horas antes desde la configuración de tu cuenta en la tienda.</p>
+      <h3>2. Prueba gratuita</h3>
+      <p>Si activás una prueba gratuita, al finalizar comienza el cobro del plan elegido, a menos que la canceles antes de que termine el período de prueba.</p>
+      <h3>3. Reembolsos</h3>
+      <p>Los reembolsos se gestionan según las políticas de la tienda de aplicaciones correspondiente (App Store o Google Play). Te recomendamos revisar esas políticas antes de suscribirte.</p>
+      <h3>4. Monedas virtuales (puntos)</h3>
+      <p>Los puntos son un elemento virtual dentro de la app. Se ganan entrenando y completando misiones, y sirven para desbloquear elementos cosméticos y funciones de juego. También podés comprar packs de puntos con dinero real, a través de la tienda de aplicaciones (App Store o Google Play).</p>
+      <ul class="li">
+        <li>Comprarlos no los vuelve dinero: aunque los pagues, no pueden canjearse de nuevo por dinero ni transferirse a otra cuenta o fuera de la app.</li>
+        <li>No son reembolsables salvo lo que exija la política de la tienda donde compraste el pack.</li>
+        <li>Pueden requerir una suscripción activa para ganarse o gastarse en ciertos casos.</li>
+      </ul>
+      <div class="note"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 8h.01M11 12h1v4h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Los puntos no constituyen una propiedad, una inversión ni un activo financiero, se hayan ganado jugando o comprado. Podemos ajustar la economía del juego (cuánto vale cada acción, precios de los packs) para mantener la experiencia equilibrada.</p></div>
+      <h3>5. Puntos</h3>
+      <p>Los puntos se ganan con tu actividad dentro de la app (entrenar, tomar agua, cumplir misiones). Son una mecánica de juego.</p>
+      <ul class="li">
+        <li>No son dinero, no son un medio de pago y no tienen valor monetario garantizado.</li>
+        <li>No representan una inversión, ni un instrumento financiero, ni una participación en la app ni en ninguna sociedad.</li>
+        <li>El saldo lo calcula y lo valida nuestro servidor. Si detectamos manipulación (datos falseados, automatización, cuentas múltiples), podemos corregir o anular el saldo.</li>
+        <li>Podemos cambiar cuánto vale cada acción, poner topes o discontinuar la mecánica.</li>
+      </ul>
+      <h3>6. Sobre el token</h3>
+      <p>Podés haber leído sobre una futura conversión de puntos a un token. A la fecha de este texto esa función NO existe en la app y no hay fecha comprometida.</p>
+      <div class="note"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 8h.01M11 12h1v4h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Nada de lo que decimos sobre un eventual token es una oferta, una promesa de valor, ni una invitación a invertir. Si alguna vez existiera, sería opcional, tendría sus propios términos y estaría sujeto a la regulación de cada país. No compres, no vendas ni tomes ninguna decisión económica basándote en los puntos que acumulás.</p></div>
+    </section>
+
+  </main>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <span>Kunev v1.0.1 · Texto legal 2026.09-8 · Vigencia Septiembre 2026 · República Oriental del Uruguay</span>
+    <span>Contacto: <a href="mailto:appfitness.oficial@gmail.com">appfitness.oficial@gmail.com</a> · Datos: <a href="mailto:appfitness.oficial@gmail.com">appfitness.oficial@gmail.com</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
